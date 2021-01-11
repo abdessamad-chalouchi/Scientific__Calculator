@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/icon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <h1>Scientific Calculator</h1>
+    <div class="deg__rad--container">
+        <input type="radio" id="deg" name="deg__rad" >
+        <label for="deg">Deg</label>
+        <input type="radio" id="rad" name="deg__rad" checked>
+        <label for="rad">Rad</label>
+        
+    </div>
+    
+    <div id="calculator__container" class="claculator__container">
+        <div id="previous__operation" >
+
+            
+        </div>
+        <input onkeypress="return /[0-9]/i.test(event.key)" type="text" class="currenet__operation" >
+
+        <div class="btn__container">
+
+<!-- linge 1 -->
+        <button id="btn__cosh" value="acos(">arccos</button>
+        <button id="btn__sinh" value="asin(">arcsin</button>
+        <button id="btn__cos" value="cos(">cos</button>
+        <button id="btn__sin" value="sin(">sin</button>
+        <button id="btn__tan" value="tan(">tan</button>
+
+        <!-- linge 2 -->
+        <button id="btn__tanh" value="atan(">arctan</button>
+        <button id="btn__log" value="log(">ln</button>
+        <button id="btn__sqrt" value="sqrt(">&radic;x</button>
+        <button id="btn__sqrt3" value="sqrt3("><sup>3</sup>&radic;x</button>
+        <button id="btn__sqrty--x" value="sqrt("><sup>y</sup>&radic;x</button>
+
+        <!-- linge 3 -->
+        <button id="btn__exp" value="exp(">e<sup>x</sup></button>
+        <button id="btn__pow10--x" value="pow(10,">10<sup>x</sup></button>
+        <button id="btn__pow2" value="sr(">x<sup>2</sup></button>
+        <button id="btn__pow3" value="cube(">x<sup>3</sup></button>
+        <button id="btn__pow" value="pow(">x<sup>y</sup></button>
+        
+        <!-- linge 4 -->
+        <button id="btn__e" value="e">e</button>
+        <button id="btn__abs" value="abs(">abs</button>
+        <button id="btn__delete" value="Del">Del</button>
+        <button id="btn__clear--all" class="span__2 btn__special" value="Cl">Cl</button>
+        
+        <!-- linge 5 -->
+        <button id="btn__pi" value="π">π</button>
+        
+        <button id="btn__7" value="7">7</button>
+        <button id="btn__8" value="8">8</button>
+        <button id="btn__9" value="9">9</button>
+        <button id="btn__divide" class="btn__special" value="/">/</button>
+        
+        <!-- linge 6 -->
+        <button id="btn__right--par" value="(">(</button>
+        <button id="btn__4" value="4">4</button>
+        <button id="btn__5" value="5">5</button>
+        <button id="btn__6" value="6">6</button>
+        <button id="btn__produit" class="btn__special" value="*">*</button>
+        
+        <!-- linge 7 -->
+        <button id="btn__left--par" value=")">)</button>
+        <button id="btn__1" value="1">1</button>
+        <button id="btn__2" value="2">2</button>
+        <button id="btn__3" value="3">3</button>
+        <button id="btn__sub" class="btn__special" value="-">-</button>
+        
+        <!-- linge 8 -->
+        <button id="btn__virgule" value=",">,</button>
+        <button id="btn__point" value=".">.</button>
+        <button id="btn__zero" value="0">0</button>
+        <button id="btn__equal" class="btn__special" value="=">=</button> 
+        <button id="btn__+" class="btn__special" value="+">+</button>
+        </div>
+    </div>
+    
+    <div class="about">
+        <div class="about__detail">
+            <details>
+                x<sup>2</sup> &harr; sr(x) <br>
+                x<sup>3</sup> &harr; cube(x) <br>
+                10<sup>x</sup> &harr; pow(10, x)<br>
+                x<sup>y</sup> &harr; pow(x, y)<br>
+                <sup>y</sup>&radic;x &harr; sqrt(x, y)<br>
+
+            </details>
+        </div>
+    </div>
+    <div class="created__by">
+        created by abdessamad chalouchi<br><br>
+        SMIi0100/19
+    </div>
+    <div class="circle__container">
+        <div class="big__circle">
+            <svg width="720" height="739" viewBox="0 0 720 739" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="482" cy="257" r="482" fill="url(#paint0_linear)" />
+                <defs>
+                    <linearGradient id="paint0_linear" x1="500" y1="229" x2="7.99998" y2="267" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#714E8E" stop-opacity="0.74" />
+                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="med__circle">
+            <svg width="496" height="496" viewBox="0 0 496 496" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="248" cy="248" r="248" fill="url(#paint0_linear)" />
+                <defs>
+                    <linearGradient id="paint0_linear" x1="500" y1="229" x2="7.99998" y2="267" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#714E8E" stop-opacity="0.74" />
+                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="small__circle">
+            <svg width="380" height="324" viewBox="0 0 380 324" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="190" cy="190" r="190" fill="url(#paint0_linear)" />
+                <defs>
+                    <linearGradient id="paint0_linear" x1="500" y1="229" x2="7.99998" y2="267" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#714E8E" stop-opacity="0.74" />
+                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

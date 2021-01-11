@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to right, #013138, #011a36);
+  color: #ffffff;
+  height: 110vh;
+}
+h1 {
+  text-align: center;
+  margin: 50px auto;
+}
+.deg__rad--container {
+  width: 40%;
+  margin: auto;
+  font-weight: 500;
+  font-size: 20px;
+}
+#calculator__container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  min-width: 300px;
+  height: 90vh;
+  min-height: 500px;
+  margin: auto;
+  grid-gap: 15px;
+  border-radius: 20px;
+  background-color: #ffffff52;
+  overflow: hidden;
+  box-shadow: inset 0 100px 2000px #ffffff80;
+  background: transparent;
+}
+
+.btn__container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 15px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 2000px #ffffff80;
+}
+/* .btn__special {
+  background: #ffffff80;
+  border-radius: 50px;
+} */
+#previous__operation {
+  grid-column: 1/-1;
+  word-wrap: break-word;
+  background: none;
+  padding: 20px;
+  font-size: 26px;
+  color: #fff;
+  border-radius: 20px;
+}
+#clear__previous--operation {
+  width: auto;
+  background: none;
+  float: right;
+}
+input {
+  grid-column: 1/-1;
+  outline: none;
+  padding: 0 10px;
+  font-size: 26px;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  background: none;
+}
+.span__2 {
+  grid-column: span 2;
+}
+
+button {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  color: #fafbfc;
+  transition: all 400ms;
+}
+#btn__point,
+#btn__virgule {
+  font-size: 30px;
+}
+button:hover {
+  transform: scale(1.5);
+}
+.about {
+  position: fixed;
+  top: 50%;
+  left: 50px;
+}
+.created__by {
+  text-align: center;
+  margin: 40px auto auto auto;
+}
+.big__circle {
+  position: absolute;
+
+  top: -30%;
+  right: 0%;
+  opacity: 0.5;
+  z-index: -1;
+}
+.med__circle {
+  position: absolute;
+  top: 50%;
+  right: 40%;
+  z-index: -1;
+  height: 60%;
+  opacity: 0.4;
+}
+.small__circle {
+  position: absolute;
+  bottom: -50%;
+  left: 0%;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+@media all and (max-width: 700px) {
+  .about {
+    position: relative;
+    top: auto;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .small__circle,
+  .med__circle {
+    opacity: 0.1;
+  }
+}
+@media screen and (max-height: 500px) {
+  .small__circle,
+  .med__circle {
+    opacity: 0;
+  }
+}
