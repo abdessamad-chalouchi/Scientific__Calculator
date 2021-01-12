@@ -8,6 +8,7 @@ function button(e) {
     
     var rad = document.getElementById("rad");
     var deg = document.getElementById("deg");
+    var hyp = document.getElementById("hyp");
     var currenetOperation = document.getElementsByClassName("currenet__operation")[0];
     var PreviousOperation = document.getElementById("previous__operation");
     var clearButton = document.createElement("button");
@@ -29,6 +30,13 @@ function button(e) {
     var pow=Math.pow;
     var e=Math.E;
     var abs=Math.abs;
+    var cosh=Math.cosh;
+    var sinh=Math.sinh;
+    var tanh=Math.tanh;
+    var acosh=Math.acosh;
+    var asinh=Math.asinh;
+    var atanh=Math.atanh;
+
     // root of degree three
     function sqrt3(x){
         return pow(x, 1/3);
@@ -116,6 +124,46 @@ function button(e) {
                 PreviousOperation.appendChild(clearButton);
                 currenetOperation.value = parseFloat(eval(currenetOperation.value).toFixed(10));
             }
+            break;
+        case "hyp":
+            hyp.value= "hyp1";
+            document.getElementById("btn__acos").value = "acosh(";
+            document.getElementById("btn__acos").innerHTML = "cosh<sup>-1</sup>";
+
+            document.getElementById("btn__asin").value = "asinh(";
+            document.getElementById("btn__asin").innerHTML = "sinh<sup>-1</sup>";
+
+            document.getElementById("btn__atan").value = "atanh(";
+            document.getElementById("btn__atan").innerHTML = "tanh<sup>-1</sup>";
+
+            document.getElementById("btn__cos").value = "cosh(";
+            document.getElementById("btn__cos").innerHTML = "cosh";
+
+            document.getElementById("btn__sin").value = "sinh(";
+            document.getElementById("btn__sin").innerHTML = "sinh";
+
+            document.getElementById("btn__tan").value = "tanh(";
+            document.getElementById("btn__tan").innerHTML = "tanh";
+            break;
+        case "hyp1":
+            hyp.value= "hyp";
+            document.getElementById("btn__acos").value = "acos(";
+            document.getElementById("btn__acos").innerHTML = "cos<sup>-1</sup>";
+
+            document.getElementById("btn__asin").value = "asin(";
+            document.getElementById("btn__asin").innerHTML = "sin<sup>-1</sup>";
+
+            document.getElementById("btn__atan").value = "atan(";
+            document.getElementById("btn__atan").innerHTML = "tan<sup>-1</sup>";
+
+            document.getElementById("btn__cos").value = "cos(";
+            document.getElementById("btn__cos").innerHTML = "cos";
+
+            document.getElementById("btn__sin").value = "sin(";
+            document.getElementById("btn__sin").innerHTML = "sin";
+
+            document.getElementById("btn__tan").value = "tan(";
+            document.getElementById("btn__tan").innerHTML = "tan";
             break;
         default:
             currenetOperation.value += click;
